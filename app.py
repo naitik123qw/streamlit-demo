@@ -52,10 +52,11 @@ model.fit(X,Y)
 user_marks = st.number_input("Enter marks to predict study hours",min_value=0,max_value=100,value=75)
 predicted_hours = model.predict([[user_marks]])
 if st.button("PREDICT"):
-    st.success(f"Predicted Study Hours{predicted_hours[0]:.2f} hours study needed to acheive your given marks goal")
-st.line_graph(data)
+    st.success(f"Predicted Study Hours {predicted_hours[0]:.2f} study needed to acheive your given marks goal")
+st.line_graph(data,x='Marks',y='Studyhours')
     
     
+
 
 
 
