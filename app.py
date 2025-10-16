@@ -46,7 +46,7 @@ data = pd.DataFrame({
     'Studyhours':[2,3,4,5,6]
     })
 X = data[['Marks']]
-Y = data['StudyHours']
+Y = data['Studyhours']
 model=LinearRegression()
 model.fit(X,Y)
 user_marks = st.number_input("Enter marks to predict study hours",min_value=0,max_value=100,value=75)
@@ -56,6 +56,7 @@ if st.button("PREDICT"):
 st.line_graph(data)
     
     
+
 
 
 
