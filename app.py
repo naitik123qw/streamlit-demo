@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 from sklearn.linear_model import LinearRegression
 st.title("AI Student Data Analyzer")
 st.subheader("welcome to the Login page")
@@ -71,6 +70,7 @@ if st.button("PREDICT"):
 st.line_graph(data)
     
     
+
 
 
 
