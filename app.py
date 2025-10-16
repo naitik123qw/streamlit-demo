@@ -35,7 +35,7 @@ if file:
     students_data = df[df["name"]==filtered_student]
     students_choice = students_data.columns.tolist()
     x = st.selectbox("give value for comparission ",students_choice)
-    y = st.selectbox("give another value of comparisssion",students_data.columns)
+    y = st.selectbox("give another value of comparisssion",students_data.columns,index = 5)
     st.subheader("line chart of student")
     st.line_chart(students_data.set_index(x)[y])
     st.subheader("bar graph of student")
@@ -53,9 +53,10 @@ user_marks = st.number_input("Enter marks to predict study hours",min_value=0,ma
 predicted_hours = model.predict([[user_marks]])
 if st.button("PREDICT"):
     st.success(f"Predicted Study Hours {predicted_hours[0]:.2f} study needed to acheive your given marks goal")
-st.line_graph(data,x='Marks',y='Studyhours')
+    st.line_graph(data,x='Marks',y='Studyhours')
+     
     
-    
+
 
 
 
