@@ -37,7 +37,7 @@ if file:
     x = st.selectbox("give value for comparission ",students_choice)
     y = st.selectbox("give another value of comparisssion",students_data.columns,index = 5)
     st.subheader("line chart of student")
-    st.line_graph(students_data.set_index(x)[y])
+    st.line_chart(students_data.set_index(x)[y])
     st.subheader("bar graph of student")
     st.bar_chart(students_data.set_index(x)[y])
 st.subheader("Study Study hours Predictor")
@@ -56,6 +56,7 @@ if st.button("PREDICT"):
     st.line_chart(data,x='Marks',y='Studyhours')
      
     
+
 
 
 
