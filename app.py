@@ -22,20 +22,6 @@ if st.button("SUBMIT"):
 if name:
     st.success(f"Welcome {name}")
 st.subheader("Welcome to the admin dashboard")
-uploaded_file = st.uploader("upload your Excel file",type=["xlsx"])
-if uploaded_file:
-    df = pd.read_excel(upload_file)
-    st.write("preview of excel file")
-    st.dataframe(df.head())
-    csv_file = "converted_file.csv"
-    df.to_csv(csv_fle,index = False)
-    st.success(f"Excel converted to csv:{csv_file}")
-    st.dowload_button(
-        label="Dowload csv",
-        data = df.to_csv(index=False).encode('utf-8'),
-        file_name = 'converted_file.csv',
-        mime='text/csv'
-        )
 file = st.file_uploader("upload your records here",type=["csv"])
 if file:
     df = pd.read_csv(file)
@@ -70,6 +56,7 @@ if st.button("PREDICT"):
 st.line_graph(data)
     
     
+
 
 
 
