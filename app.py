@@ -40,7 +40,7 @@ if file:
     st.line_chart(students_data.set_index(x)[y])
     st.subheader("bar graph of student")
     st.bar_chart(students_data.set_index(x)[y])
-st.subheader("Study Study hours Predictor")
+st.subheader("Student Study hours Predictor")
 data = pd.DataFrame({
     'Marks':[50,60,70,80,90],
     'Studyhours':[2,3,4,5,6]
@@ -56,6 +56,7 @@ if st.button("PREDICT"):
     st.line_chart(data,x='Marks',y='Studyhours')
      
     
+
 
 
 
