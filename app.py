@@ -24,9 +24,9 @@ if name:
 st.subheader("Welcome to the admin dashboard")
 file = st.file_uploader("upload your records here",type=["csv"])
 if person==Student:
-        if file:
+    if file:
     df = pd.read_csv(file)
-    st.dataframe(df)
+    st.dataframe(df)  
     if file:
     st.success("Students analytics dashboard ")
     st.write(df.describe())
@@ -57,6 +57,7 @@ if st.button("PREDICT"):
     st.line_chart(data,x='Marks',y='Studyhours')
      
     
+
 
 
 
