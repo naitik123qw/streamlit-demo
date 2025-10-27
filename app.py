@@ -21,7 +21,7 @@ if st.button("SUBMIT"):
     st.subheader("Login successfully")
 if name:
     st.success(f"Welcome {name}")
-st.subheader("Welcome to the admin dashboard")
+st.success("Welcome to the admin dashboard")
 file = st.file_uploader("upload your records here",type=["csv"])
 if file:
     df = pd.read_csv(file)
@@ -60,6 +60,7 @@ if st.button("PREDICT"):
     st.line_chart(data,x='Marks',y='Studyhours')
      
     
+
 
 
 
