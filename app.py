@@ -18,7 +18,7 @@ st.sidebar.write(f"your date of birth is {dob}")
 st.sidebar.write(f"your gender is {gender}")
 st.sidebar.write(f"your age is {age} year old")
 if st.button("SUBMIT"):
-    st.form_submit_button("Submit")
+    st.subheader("Login successfully")
 if name:
     st.success(f"Welcome {name}")
 st.subheader("Welcome to the admin dashboard")
@@ -60,6 +60,7 @@ if st.button("PREDICT"):
     st.line_chart(data,x='Marks',y='Studyhours')
      
     
+
 
 
 
