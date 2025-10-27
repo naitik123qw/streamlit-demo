@@ -44,8 +44,6 @@ if file:
     st.area_chart(students_data.set_index(x)[y])
     st.subheader("scatter chart of student data")
     st.scatter_chart(students_data.set_index(x)[y])
-    st.subheader("altair chart of student data")
-    st.altair_chart(students_data.set_index(x)[y])
 st.subheader("Student Study hours Predictor")
 data = pd.DataFrame({
     'Marks':[50,60,70,80,90],
@@ -62,6 +60,7 @@ if st.button("PREDICT"):
     st.line_chart(data,x='Marks',y='Studyhours')
      
     
+
 
 
 
